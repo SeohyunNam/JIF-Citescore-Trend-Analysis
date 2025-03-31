@@ -1,41 +1,39 @@
-# JIF-Citescore-Trend-Analysis
+# 📊 JIF & CiteScore Trend Analysis
 
+This project visualizes the yearly trends of **CiteScore** and **Journal Impact Factor (JIF)** for major academic journals.  
+Citation metrics were compared using data from **Scopus** and **Web of Science** for four representative journals.
 
+---
 
-
-This project visualizes the yearly trends of CiteScore and Journal Impact Factor (JIF) for major academic journals.
-Citation metrics were compared using data from Scopus and Web of Science for four representative journals.
-
-# Target Journals for Analysis 
-
+## 🎯 Target Journals for Analysis
 
 The following four journals were selected for comparative analysis:
 
-Expert Systems
+- *Expert Systems*
+- *Expert Systems with Applications*
+- *Information Fusion*
+- *Journal of Informetrics*
 
-Expert Systems with Applications
+---
 
-Information Fusion
+## 📁 Dataset
 
-Journal of Informetrics
+**Source**: Web of Science & Scopus
 
-# Dataset 
+---
 
+## 🧪 Preprocessing Techniques Used
 
-Source: Web of Science & Scopus
+- **MinMax Scaler**  
+  Scales features to a fixed range, typically between 0 and 1.
 
-# Preprocessing Techniques Used
+- **Standard Scaler**  
+  Standardizes features by removing the mean and scaling to unit variance (Z-score normalization).
 
-MinMax Scaler
-Scales features to a fixed range, typically between 0 and 1.
+- **MaxAbs Scaler**  
+  Scales each feature by its maximum absolute value; keeps zero-centered data and is useful for sparse data.
 
-Standard Scaler
-Standardizes features by removing the mean and scaling to unit variance (Z-score normalization).
+- **Robust Scaler**  
+  Scales features using statistics that are robust to outliers (median and interquartile range).
 
-MaxAbs Scaler
-Scales each feature by its maximum absolute value; keeps zero-centered data and is useful for sparse data.
-
-Robust Scaler
-Scales features using statistics that are robust to outliers (median and interquartile range).
-
-
+---
