@@ -14,3 +14,9 @@ Scopus와 Web of Science 데이터를 활용하여 4개의 대표적인 저널�
 2. Expert Systems with Applications  
 3. Information Fusion  
 4. Journal of Informetrics
+
+< Dataset >
+
+아래 데이터베이스에 있는 데이터를 수집하였다.
+
+Web of science &amp; Scopus
