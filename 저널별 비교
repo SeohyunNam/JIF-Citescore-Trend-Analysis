@@ -1,31 +1,25 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# CSV 파일 경로 설정 (실제 파일 경로로 수정)
 file_path = "C:/Users/남서현/OneDrive/바탕 화면/dataset/scopus_webofscience.csv"
 df = pd.read_csv(file_path)
 
-# 필요한 컬럼들을 숫자형으로 변환 (오류 발생 시 NaN 처리)
 df['Year'] = pd.to_numeric(df['Year'], errors='coerce')
 df['CiteScore'] = pd.to_numeric(df['CiteScore'], errors='coerce')
 df['Journal impact factor'] = pd.to_numeric(df['Journal impact factor'], errors='coerce')
 
-# 비교할 4개의 저널 선택 (데이터에 있는 실제 저널명으로 변경하세요)
 selected_journals = ["Expert Systems", "Expert Systems with Applications", "Information Fusion", "Journal of Informetrics"]
 
-# 선택한 저널만 필터링
 df_selected = df[df['Source'].isin(selected_journals)]
 
-# 2x2 subplot 생성 (4개 저널용)
 fig, axes = plt.subplots(2, 2, figsize=(15, 10), sharex=False)
 axes = axes.flatten()
 
 for i, journal in enumerate(selected_journals):
     ax = axes[i]
-    # 해당 저널 데이터 연도 순 정렬
+  
     journal_data = df_selected[df_selected['Source'] == journal].sort_values('Year')
     
-    # CiteScore와 JIF (Journal impact factor) 시계열 그래프 그리기
     ax.plot(journal_data['Year'], journal_data['CiteScore'], marker='o', label='CiteScore')
     ax.plot(journal_data['Year'], journal_data['Journal impact factor'], marker='s', label='JIF')
     
