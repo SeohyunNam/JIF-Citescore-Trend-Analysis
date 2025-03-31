@@ -1,0 +1,32 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+file_path = "C:/Users/남서현/OneDrive/바탕 화면/dataset/scopus_webofscience_standard_scaled.csv"
+df = pd.read_csv(file_path)
+
+df['Year'] = pd.to_numeric(df['Year'], errors='coerce')
+df['CiteScore'] = pd.to_numeric(df['CiteScore'], errors='coerce')
+df['Journal impact factor'] = pd.to_numeric(df['Journal impact factor'], errors='coerce')
+
+selected_journals = ["Expert Systems", "Expert Systems with Applications", "Information Fusion", "Journal of Informetrics"]
+
+df_selected = df[df['Source'].isin(selected_journals)]
+
+fig, axes = plt.subplots(2, 2, figsize=(15, 10), sharex=False)
+axes = axes.flatten()
+
+for i, journal in enumerate(selected_journals):
+    ax = axes[i]
+    journal_data = df_selected[df_selected['Source'] == journal].sort_values('Year')
+    
+    ax.plot(journal_data['Year'], journal_data['CiteScore'], marker='o', label='CiteScore')
+    ax.plot(journal_data['Year'], journal_data['Journal impact factor'], marker='s', label='JIF')
+    
+    ax.set_title(journal)
+    ax.set_xlabel('Year')
+    ax.set_ylabel('Value')
+    ax.legend()
+    ax.grid(True)
+
+plt.tight_layout()
+plt.show()
