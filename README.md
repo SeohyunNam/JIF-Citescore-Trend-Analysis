@@ -1,7 +1,6 @@
 # JIF-Citescore-Trend-Analysis
 
 
-# JIF & CiteScore Trend Analysis 
 
 
 This project visualizes the yearly trends of CiteScore and Journal Impact Factor (JIF) for major academic journals.
@@ -20,7 +19,7 @@ Information Fusion
 
 Journal of Informetrics
 
-# Dataset >
+# Dataset 
 
 
 Source: Web of Science & Scopus
