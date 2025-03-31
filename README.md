@@ -1,20 +1,21 @@
 # JIF-Citescore-Trend-Analysis
-Web of science &amp; Scopus
 
 < JIF & CiteScore Trend Analysis >
+This project visualizes the yearly trends of CiteScore and Journal Impact Factor (JIF) for major academic journals.
+Citation metrics were compared using data from Scopus and Web of Science for four representative journals.
 
-이 프로젝트는 주요 학술 저널들의 CiteScore와 Journal Impact Factor (JIF)의 연도별 변화를 시각화하였다. 
-Scopus와 Web of Science 데이터를 활용하여 4개의 대표적인 저널의 인용 지표를 비교하였다.
+< Target Journals for Analysis >
+The following four journals were selected for comparative analysis:
 
-< 분석 대상 저널 >
+Expert Systems
 
-다음 네 가지 저널의 인용 지표를 비교 분석하였다.
+Expert Systems with Applications
 
-1. Expert Systems  
-2. Expert Systems with Applications  
-3. Information Fusion  
-4. Journal of Informetrics
+Information Fusion
+
+Journal of Informetrics
 
 < Dataset >
+Source: Web of Science & Scopus
 
-Web of science &amp; Scopus
+
