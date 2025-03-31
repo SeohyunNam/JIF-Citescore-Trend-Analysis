@@ -31,3 +31,4 @@ for i, journal in enumerate(selected_journals):
 
 plt.tight_layout()
 plt.show()
+
