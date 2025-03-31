@@ -24,4 +24,18 @@ Journal of Informetrics
 
 Source: Web of Science & Scopus
 
+# Preprocessing Techniques Used
+
+MinMax Scaler
+Scales features to a fixed range, typically between 0 and 1.
+
+Standard Scaler
+Standardizes features by removing the mean and scaling to unit variance (Z-score normalization).
+
+MaxAbs Scaler
+Scales each feature by its maximum absolute value; keeps zero-centered data and is useful for sparse data.
+
+Robust Scaler
+Scales features using statistics that are robust to outliers (median and interquartile range).
+
 
